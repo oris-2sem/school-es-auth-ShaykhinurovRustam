@@ -1,0 +1,90 @@
+POST http://localhost/task/create
+Content-Type: application/json
+
+{
+  "lesson": null,
+  "student": null,
+  "commentary": "test",
+  "description": "description",
+  "mark": "A"
+}
+
+###
+
+GET http://localhost/task
+
+###
+
+GET http://localhost/task/id?id=4170ce66-be01-4f89-919f-319021966f03
+
+###
+
+POST http://localhost/task/del
+Content-Type: application/json
+
+{
+  "id": "4170ce66-be01-4f89-919f-319021966f03"
+}
+
+###
+
+POST http://localhost/teacher/create
+Content-Type: application/json
+
+{
+  "age": 35,
+  "firstName": "Oleg",
+  "lastName": "Bogomolov",
+  "rating": 4.8
+}
+
+###
+
+GET http://localhost/teacher
+
+###
+
+POST http://localhost/group/create
+Content-Type: application/json
+
+{
+  "course": 1,
+  "teacherId": "f613b311-aaf2-4b45-a18d-07236f68033e",
+  "dateInsert": "2023-04-17T12:30:45.000Z"
+}
+
+###
+
+POST http://localhost/parent/create
+Content-Type: application/json
+
+{
+  "name": "Vladimir"
+}
+
+###
+
+POST http://localhost/student/create
+Content-Type: application/json
+
+{
+  "parentId": "32719587-b417-4215-b430-37e0fefdcc5e",
+  "groupId": "c4e6c196-019c-4c0b-8370-1323612a4267",
+  "firstName": "Vitaly",
+  "rating": 3.8
+}
+
+###
+
+GET http://localhost/parent/id?id=32719587-b417-4215-b430-37e0fefdcc5e
+
+###
+
+GET http://localhost/group
+
+###
+
+GET http://localhost/student
+
+##
+
